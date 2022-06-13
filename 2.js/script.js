@@ -1,34 +1,37 @@
 /* 
-1/ Add a title attribute to every element that has the important class, stating This is an important item. 
-Tip: adding a title attribute to an element is different from change a title of a document.
+1. Ajoutez un attribut de titre à chaque élément qui possède la classe important, en indiquant 
+Ceci est un élément important. Conseil : ajouter un attribut title à un élément est différent 
+de la modification du titre d'un document.
 
-2/ Select all the img tags and loop through them. If they have no important class, 
-turn their display property to none
+2. Sélectionnez toutes les balises img et parcourez-les en boucle. Si elles n'ont pas de classe important,
+mettez leur propriété display sur none.
 
-3/ Loop through all the paragraphs and display their content in the console. 
-If the paragraph has a class, display its classname has well
+3. Parcourez tous les paragraphes et affichez leur contenu dans la console. Si le paragraphe a une classe, 
+affichez son nom de classe a bien
 
-4/ Give each of the paragraph a random text color (different for each one) UNLESS it has a class then leave it as it is.*/
+Donnez à chacun des paragraphes une couleur de texte aléatoire (différente pour chacun d'eux) 
+SAUF s'il a une classe, alors laissez-le tel quel.
+*/
 
-let change = document.querySelectorAll('.important');
+let change = document.querySelectorAll('.important'); // Sélectionne tous les éléments qui ont la class important
 change.forEach(element => {     
     element.setAttribute('Title', 'This is an important item'); 
-});
+}); // Ajoute un attribut title à tous les éléments qui ont la class important
 
-let img = document.querySelectorAll('img');
+let img = document.querySelectorAll('img'); //
 
 img.forEach(element => {
     if (!element.classList.contains("important")) {
         element.style.display = "none"
         }
     }
-);
+); // Si l'élément n'a pas la class important, il est caché
 
-let ch = document.querySelectorAll('p');
+let ch = document.querySelectorAll('p'); // Sélectionne tous les éléments qui sont des paragraphes
 
 ch.forEach(element => {
     if (!element.classList.contains("important")) {
         element.style.color = "#" + Math.floor(Math.random() * 10000)
         }
     }
-);
+); // Si l'élément n'a pas la class important, il est coloré aléatoirement
