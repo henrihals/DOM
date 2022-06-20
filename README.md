@@ -10,3 +10,5 @@ Programme utilisé: HTML - JS - css
 
 Lien Github : https://github.com/henrihals/DOM.git
 
+Lien Internet : https://henrihals.github.io/DOM/
+
